@@ -41,6 +41,8 @@ Model fitting is the slow step (days of CPU time for all studies). Every fit can
 
 ## What is included
 
+In the GitHub repository the `fits/` folder is stored as `fits.zip` (GitHub limits uploads to 100 files); unzip it in this folder to restore `fits/`.
+
 * `fits/<model>/<study>_summary.csv`: posterior summaries (means, SDs, 94% HDIs, R-hat, ESS) and fit diagnostics for
   every fit, including model recovery (`*_recovery`) and robustness (`*_logit`, `*_subjlapse`) fits.
 * `fits/<model>/<study>_pointwise.csv.gz`: trial-wise PSIS-LOO values and Pareto-k diagnostics, which are enough to
