@@ -31,13 +31,16 @@ python -m venv .venv
 | 4 | `python 08_ppc.py` | Posterior predictive checks and calibration slopes | `results/ppc_*.csv`, Figure 7 |
 | 5 | `python 10_model_recovery.py --simulate`, then `run_model_recovery.bat`, then `python 10_model_recovery.py` | Model recovery: simulate from R2 and refit all models | `sim/`, `results/model_recovery.csv` |
 | 6 | `run_robust_logit.bat`, `run_robust_subjlapse.bat`, then `python 13_robustness.py` | Refits with a logistic link and with per-participant lapse rates | `results/robustness.csv` |
+| 6b | `run_robust_noiset.bat`, then `python 13_robustness.py` | Refits of R2 and R2F with choice noise that grows with delay | `results/robustness.csv` |
+| 6c | `python 15_corr_recovery.py --simulate`, then `run_corr_recovery.bat`, then `python 15_corr_recovery.py` | Recovery check for the participant-level correlation of the two magnitude slopes | `sim/sim_corr.csv.gz`, `results/corr_recovery.csv` |
+| 6d | `python 05_mle_r2_r2f.py` | Per-participant maximum-likelihood fits of R2 and R2F (no MCMC) | `results/mle_r2_r2f_*.csv` |
 | 7 | `python 12_moderators.py` | Moderator meta-regressions and subgroup estimates | `results/moderators_*.csv`, Figure 8 |
 | 8 | `python 14_r2_elasticity.py` | Exact elasticities of choice precision (Propositions 2 and 4) on the real designs | `results/r2_elasticities.csv` |
 | 9 | `python 07_make_figures.py`, `python 11_method_figure.py`, `python 09_supp_table.py` | Figures 1 to 6 and Table A.1 | `figures/`, `table_s1.tex` |
 
 Model fitting is the slow step (days of CPU time for all studies). Every fit can be run for a single study, e.g.
 `python 02_fit_models.py --model r2f "Keidel_2024|s1"`. Options: `--draws`, `--tune`, `--target-accept`,
-`--out-suffix`; environment variables `LINK=logit` and `LAPSE_MODE=subject` select the robustness variants.
+`--out-suffix`; environment variables `LINK=logit`, `LAPSE_MODE=subject` and `NOISE_T=1` select the robustness variants.
 
 ## What is included
 

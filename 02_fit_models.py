@@ -49,7 +49,10 @@ BIG_TRIALS, BIG_SUBJ = 15000, 400   # "big" studies run their chains sequentiall
 # Robustness variants (defaults reproduce the main analysis):
 #   LINK=logit         logistic instead of probit choice rule
 #   LAPSE_MODE=subject one lapse rate per participant, logit(eps_s) ~ Normal(eps_mu, eps_sd), instead of one per study
+#   NOISE_T=1          R2/R2F choice noise also grows with delay, Var(V_hat_j) = D_j^2 t_j s2_e_j (the signal model of
+#                      the derivation), instead of D_j^2 s2_e_j as in the original implementation
 LINK = os.environ.get("LINK", "probit")
+NOISE_T = os.environ.get("NOISE_T", "0") == "1"
 LAPSE_MODE = os.environ.get("LAPSE_MODE", "study")
 PHI_PT = pt.sigmoid if LINK == "logit" else (lambda x: 0.5 * pt.erfc(-x / np.sqrt(2)))
 PHI_NP = sps.expit if LINK == "logit" else (lambda x: 0.5 * sps.erfc(-x / np.sqrt(2)))
@@ -102,7 +105,10 @@ def prob(xp, Phi, th, eps, g, model):
         kS, kL = 1 / (beta * rS), 1 / (beta * rL)
         DS, DL = 1 / (1 + kS * tS), 1 / (1 + kL * tL)
         s2 = g.s2_u.values
-        alpha = 1 / xp.sqrt(DL ** 2 * s2 / (beta * rL) + DS ** 2 * s2 / (beta * rS))
+        if NOISE_T:   # noise of the delayed signal, Eq. (signal): variance t_j * s2_e_j
+            alpha = 1 / xp.sqrt(DL ** 2 * tL * s2 / (beta * rL) + DS ** 2 * tS * s2 / (beta * rS))
+        else:
+            alpha = 1 / xp.sqrt(DL ** 2 * s2 / (beta * rL) + DS ** 2 * s2 / (beta * rS))
         if model == "r2f":
             alpha = alpha * xp.exp(th[..., 1] + th[..., 2] * cM)
         dv = rL * DL - rS * DS
@@ -230,7 +236,7 @@ def fit_unit(d, unit, model, lapse, draws, tune, chains, outdir, target_accept=0
     s = s[~s.index.str.contains(r"corr\[(\w+), \1\]", regex=True)]
     lw = batched_loo_waic(ll[keep], posterior_reff(post))
     del ll
-    meta = dict(unit=unit, link=LINK, lapse_mode=LAPSE_MODE, subsampled=bool(max_subj and d[d.unit == unit].subj_ident.nunique() > max_subj), model=model, lapse=lapse, seconds=round(secs), n_subj=g.subj_ident.nunique(),
+    meta = dict(unit=unit, link=LINK, lapse_mode=LAPSE_MODE, noise_t=NOISE_T, subsampled=bool(max_subj and d[d.unit == unit].subj_ident.nunique() > max_subj), model=model, lapse=lapse, seconds=round(secs), n_subj=g.subj_ident.nunique(),
                 n_trials=len(g), chains_dropped=chains - len(keep),
                 chain_loglik=";".join(f"{v:.1f}" for v in tot),
                 divergences=int(ss.diverging.sum()), max_rhat=float(s.r_hat.max()),

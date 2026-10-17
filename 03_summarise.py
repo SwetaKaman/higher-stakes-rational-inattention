@@ -126,7 +126,7 @@ for u in units:
     is_short = u in {re.sub(r"[^A-Za-z0-9_.-]+", "_", x) for x in SHORT}
     for full_m, pooled_m in [("h2", "h2p"), ("r2f", "r2fp")]:
         if is_short:
-            pw.pop(full_m, None)
+            # pooled-slope model replaces the full one; if it could not be fitted, the full model is kept
             if pooled_m in pw:
                 pw[full_m] = pw.pop(pooled_m)
         else:
