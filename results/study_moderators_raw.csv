@@ -1,0 +1,42 @@
+unit,paper,subset,country,currency,procedure,incentivization,presentation_of_information,fixed_attributes,time_pressure,online_study,mean_age
+Alvarez_2022|s1,Alvarez_2022,1,USA,USD,Fixed Choice Set,Potentially Real,Simultaneous,SS_Time,0,1,50.01341885165318
+Andersen_2014|s1,Andersen_2014,1,Denmark,DKK,Full Cross,Potentially Real,Simultaneous,SS_Time; SS_Value,0,0,48.70944309927361
+Berenson_2016|s1,Berenson_2016,1,USA,USD,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,0,0,31.983333333333334
+Bixter_2017|s1,Bixter_2017,1,USA,USD,Fixed Choice Set,Hypothetical,Simultaneous,,0,0,
+Bixter_2019|s1,Bixter_2019,1,USA,USD,Fixed Choice Set,Hypothetical,Simultaneous,,0,0,
+Cao_2021_Exp2|s1,Cao_2021_Exp2,1,Mixed,USD,Other,Potentially Real,Simultaneous,,1,1,
+Cao_2021_Exp2|s2,Cao_2021_Exp2,2,Mixed,USD,Kirby Questionnaire,Potentially Real,Simultaneous,,1,1,
+Castrellon_2019|s1,Castrellon_2019,1,USA,USD,Random Choice,Potentially Real,Simultaneous,,1,0,
+Chiong_2016|s1,Chiong_2016,1,USA,USD,Random Choice,Hypothetical,Simultaneous,SS_Time,0,0,
+Civai_2016|s1,Civai_2016,1,USA,USD,Fixed Choice Set,Potentially Real,Sequential,,1,0,
+Faulkner_2014|s1,Faulkner_2014,1,UK,GBP,Fixed Choice Set,Potentially Real,Simultaneous,,0,0,
+Gluth_2017_Exp1|s1,Gluth_2017_Exp1,1,Switzerland,CHF,Random Choice,Potentially Real,Simultaneous,,0,0,
+Gluth_2017_Exp2|s1,Gluth_2017_Exp2,1,Switzerland,CHF,Random Choice,Potentially Real,Simultaneous,,0,0,
+Hartmann_2020|s1,Hartmann_2020,1,Mixed,CHF,5-Trial Delay Discounting Task,Hypothetical,Simultaneous,SS_Time,0,1,
+Keidel_2022|s1,Keidel_2022,1,Germany,EUR,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,0,1,34.05162827640985
+Keidel_2024|s1,Keidel_2024,1,Germany,EUR,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,1,0,23.265642151481888
+Keidel_2024|s2,Keidel_2024,2,Germany,EUR,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,1,0,23.259748050389923
+Kräplin_2020b|s1,Kräplin_2020b,1,Germany,EUR,Other,Potentially Real,Simultaneous,SS_Time,0,0,21.915966386554622
+Lempert_2015|s1,Lempert_2015,1,USA,USD,Fixed Choice Set,Potentially Real,Simultaneous,SS_Time,0,0,
+Lempert_2016|s1,Lempert_2016,1,USA,USD,Fixed Choice Set,Potentially Real,Sequential,SS_Time,1,0,
+Lempert_2017b|s1,Lempert_2017b,1,USA,USD,Full Cross,Potentially Real,Simultaneous,SS_Time,0,0,
+Linhartova_2020|s1,Linhartova_2020,1,Czech Republic,CZK,Titration Procedure,Hypothetical,Simultaneous,SS_Time; LL_Value,0,0,
+Ortner_2013|s1,Ortner_2013,1,Germany,EUR,Kirby Questionnaire,Potentially Real,Simultaneous,,0,0,
+Reppert_2015|s1,Reppert_2015,1,USA,USD,Fixed Choice Set,Potentially Real,Simultaneous,SS_Time; LL_Time,1,0,
+Robinson_2015|s1,Robinson_2015,1,UK,GBP,Titration Procedure,Hypothetical,Simultaneous,SS_Time,0,0,
+Rodriguez-Moreno_2021|s1,Rodriguez-Moreno_2021,1,USA,USD,Random Choice,Potentially Real,Simultaneous,,1,0,15.031044255504685
+Scherbaum_2018a|s1,Scherbaum_2018a,1,Germany,EUR,Full Cross,Hypothetical,Sequential,,1,0,
+Stevens_2016|s1,Stevens_2016,1,Germany,EUR,Fixed Choice Set,Potentially Real,Simultaneous,,0,0,
+Thome_2023|s1,Thome_2023,1,UK,GBP,Full Cross,Hypothetical,Simultaneous,SS_Time,1,1,
+Thome_2023|s2,Thome_2023,2,UK,GBP,Other,Hypothetical,Simultaneous,SS_Time,1,1,
+Thrailkill_2022a|s1,Thrailkill_2022a,1,USA,USD,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,0,1,35.361474219477124
+Thrailkill_2022b|s1,Thrailkill_2022b,1,USA,USD,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,0,1,38.201465201516484
+Thrailkill_2023|s1,Thrailkill_2023,1,USA,USD,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,0,1,36.7098507838695
+Weidacker_2020|s1,Weidacker_2020,1,UK,GBP,Kirby Questionnaire,Hypothetical,Simultaneous,SS_Time,0,0,
+Yang_2022|s1,Yang_2022,1,China,CNY,Fixed Choice Set,Potentially Real,Simultaneous,,0,0,
+Yang_2022|s2,Yang_2022,2,China,CNY,Fixed Choice Set,Hypothetical,Simultaneous,,0,0,
+Zgonnikov_2019|s1,Zgonnikov_2019,1,Japan,USD,Other,Hypothetical,Simultaneous,SS_Time,0,0,29.506849315068493
+Zhang_2022|s1,Zhang_2022,1,China,CNY,Full Cross,Potentially Real,Simultaneous,SS_Time,0,0,
+Zhao_2019|s1,Zhao_2019,1,USA,USD,Full Cross,Potentially Real,Simultaneous,SS_Time,1,0,
+Zhou_2022|s1,Zhou_2022,1,China,CNY,Fixed Choice Set,Potentially Real,Simultaneous,,0,0,
+Zilker_2021|s1,Zilker_2021,1,Germany,USD,Fixed Choice Set,Hypothetical,Simultaneous,,0,0,47.050632911392405

@@ -1,0 +1,2 @@
+unit,n_subj,n_trials,sum_dAIC,sum_dBIC,subj_favour_r2f_bic,g1_median,g1_mean,g1_sd,g1_se,study_favours_bic,study_favours_aic
+Berenson_2016|s1,60,1620,-52.54181922862492,-208.0422431491444,7,-0.596615430523102,-0.27215908884063467,3.214003433789945,0.4149260591240636,R2,R2
